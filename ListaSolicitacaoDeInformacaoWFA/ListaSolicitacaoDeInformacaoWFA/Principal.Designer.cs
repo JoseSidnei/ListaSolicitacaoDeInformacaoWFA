@@ -142,6 +142,7 @@
             this.btExercício4.TabIndex = 9;
             this.btExercício4.Text = "Exercício 04";
             this.btExercício4.UseVisualStyleBackColor = true;
+            this.btExercício4.Click += new System.EventHandler(this.btExercício4_Click);
             // 
             // btExercício3
             // 
@@ -152,6 +153,7 @@
             this.btExercício3.TabIndex = 10;
             this.btExercício3.Text = "Exercício 03";
             this.btExercício3.UseVisualStyleBackColor = true;
+            this.btExercício3.Click += new System.EventHandler(this.btExercício3_Click);
             // 
             // Principal
             // 
