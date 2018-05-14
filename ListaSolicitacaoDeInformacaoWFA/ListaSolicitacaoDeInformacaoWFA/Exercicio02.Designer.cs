@@ -33,10 +33,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtQuantidadePorDia = new System.Windows.Forms.TextBox();
             this.txtQuantidadeDeAnosConsumidos = new System.Windows.Forms.TextBox();
-            this.mtbValor = new System.Windows.Forms.MaskedTextBox();
+            this.mtbValorPorLitro = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.rbQuantidadeConsumidaPorAno = new System.Windows.Forms.RadioButton();
-            this.rbValorTotal = new System.Windows.Forms.RadioButton();
+            this.txtResultado = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtQuantidadeLitrosPorDia
@@ -88,19 +88,19 @@
             this.txtQuantidadeDeAnosConsumidos.Size = new System.Drawing.Size(162, 22);
             this.txtQuantidadeDeAnosConsumidos.TabIndex = 5;
             // 
-            // mtbValor
+            // mtbValorPorLitro
             // 
-            this.mtbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbValor.Location = new System.Drawing.Point(13, 199);
-            this.mtbValor.Mask = "990.00";
-            this.mtbValor.Name = "mtbValor";
-            this.mtbValor.Size = new System.Drawing.Size(44, 22);
-            this.mtbValor.TabIndex = 6;
+            this.mtbValorPorLitro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbValorPorLitro.Location = new System.Drawing.Point(13, 199);
+            this.mtbValorPorLitro.Mask = "990.00";
+            this.mtbValorPorLitro.Name = "mtbValorPorLitro";
+            this.mtbValorPorLitro.Size = new System.Drawing.Size(44, 22);
+            this.mtbValorPorLitro.TabIndex = 6;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(220, 305);
+            this.button1.Location = new System.Drawing.Point(518, 346);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 71);
             this.button1.TabIndex = 11;
@@ -108,39 +108,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // rbQuantidadeConsumidaPorAno
+            // txtResultado
             // 
-            this.rbQuantidadeConsumidaPorAno.AutoSize = true;
-            this.rbQuantidadeConsumidaPorAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbQuantidadeConsumidaPorAno.Location = new System.Drawing.Point(381, 31);
-            this.rbQuantidadeConsumidaPorAno.Name = "rbQuantidadeConsumidaPorAno";
-            this.rbQuantidadeConsumidaPorAno.Size = new System.Drawing.Size(277, 24);
-            this.rbQuantidadeConsumidaPorAno.TabIndex = 12;
-            this.rbQuantidadeConsumidaPorAno.TabStop = true;
-            this.rbQuantidadeConsumidaPorAno.Text = "Quantidade consumida por ano";
-            this.rbQuantidadeConsumidaPorAno.UseVisualStyleBackColor = true;
+            this.txtResultado.Location = new System.Drawing.Point(13, 318);
+            this.txtResultado.Multiline = true;
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.Size = new System.Drawing.Size(272, 99);
+            this.txtResultado.TabIndex = 12;
             // 
-            // rbValorTotal
+            // label1
             // 
-            this.rbValorTotal.AutoSize = true;
-            this.rbValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbValorTotal.Location = new System.Drawing.Point(381, 105);
-            this.rbValorTotal.Name = "rbValorTotal";
-            this.rbValorTotal.Size = new System.Drawing.Size(110, 24);
-            this.rbValorTotal.TabIndex = 13;
-            this.rbValorTotal.TabStop = true;
-            this.rbValorTotal.Text = "Valor total";
-            this.rbValorTotal.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 293);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 22);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Resultado";
             // 
             // Exercicio02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 460);
-            this.Controls.Add(this.rbValorTotal);
-            this.Controls.Add(this.rbQuantidadeConsumidaPorAno);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.mtbValor);
+            this.Controls.Add(this.mtbValorPorLitro);
             this.Controls.Add(this.txtQuantidadeDeAnosConsumidos);
             this.Controls.Add(this.txtQuantidadePorDia);
             this.Controls.Add(this.label3);
@@ -160,9 +155,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtQuantidadePorDia;
         private System.Windows.Forms.TextBox txtQuantidadeDeAnosConsumidos;
-        private System.Windows.Forms.MaskedTextBox mtbValor;
+        private System.Windows.Forms.MaskedTextBox mtbValorPorLitro;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton rbQuantidadeConsumidaPorAno;
-        private System.Windows.Forms.RadioButton rbValorTotal;
+        private System.Windows.Forms.TextBox txtResultado;
+        private System.Windows.Forms.Label label1;
     }
 }

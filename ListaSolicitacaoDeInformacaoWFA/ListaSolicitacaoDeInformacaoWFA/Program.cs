@@ -16,7 +16,7 @@ namespace ListaSolicitacaoDeInformacaoWFA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Exercicio01());
+            Application.Run(new Principal());
         }
     }
 }

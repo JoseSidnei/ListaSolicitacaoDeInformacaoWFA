@@ -30,30 +30,26 @@ namespace ListaSolicitacaoDeInformacaoWFA
             InitializeComponent();
         }
 
-        int quantidadePorDia = 0, quantidadePorAno = 0;
-        double valortTotal = 0, quantidadeLitros = 0;
-
         private void button1_Click(object sender, EventArgs e)
         {
-            ArmazenarInformacoes();
-            if (rbQuantidadeConsumidaPorAno.Checked)
-            {
-                QuantidadeConsumidaPorAno();
-            }
+            int quantidadeDeLitrosPorDia = 0, quantidadeDeLitrosPorAno = 0;
+            double valorlitro = 0;
 
-           
+            quantidadeDeLitrosPorDia = Convert.ToInt32(txtQuantidadePorDia.Text);
+            quantidadeDeLitrosPorAno = Convert.ToInt32(txtQuantidadeDeAnosConsumidos.Text);
+            valorlitro = Convert.ToDouble(mtbValorPorLitro.Text);
+            double quantidadelitros = (quantidadeDeLitrosPorDia * 365 * quantidadeDeLitrosPorAno);
+            double valortotalpago = (valorlitro * quantidadelitros);
+
+
+            string textao = string.Format("Quantidade de Litros consumido: {0} Litros\r\nValor total Pago: R$ {1}\r\n",
+                                           quantidadelitros, valortotalpago);
+            txtResultado.Text = textao;
         }
 
-        private void ArmazenarInformacoes()
-        {
-            quantidadePorDia = Convert.ToInt32(txtQuantidadePorDia.Text);
-            quantidadePorAno = Convert.ToInt32(txtQuantidadeDeAnosConsumidos.Text);
-        }
+        
 
-        public void QuantidadeConsumidaPorAno()
-        {
-            quantidadeLitros = quantidadePorDia = (quantidadePorDia * 365) * (quantidadePorAno);
-           MessageBox.Show("Quantidade de Litros consumido: " + quantidadeLitros);
-        }
+       
+
     }
 }
