@@ -41,6 +41,12 @@ namespace ListaSolicitacaoDeInformacaoWFA
             exercicio04.Show();
         }
 
+        private void btExercício5_Click(object sender, EventArgs e)
+        {
+            Exercicio05 exercicio05 = new Exercicio05();
+            exercicio05.Show();
+        }
+
       
     }
 }
