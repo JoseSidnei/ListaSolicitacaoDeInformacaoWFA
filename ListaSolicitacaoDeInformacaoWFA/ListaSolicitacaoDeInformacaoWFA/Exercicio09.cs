@@ -12,6 +12,13 @@ namespace ListaSolicitacaoDeInformacaoWFA
 {
     public partial class Exercicio09 : Form
     {
+        /* 9. Solicite dois números e inverta os valores destas variáveis.
+
+             Exemplo:
+             número 1: 29
+             número 2: 32
+             Após a inversão a variável número 1 terá o valor 32 e a variável número 2 terá o valor 29. */
+
         public Exercicio09()
         {
             InitializeComponent();
