@@ -12,6 +12,16 @@ namespace ListaSolicitacaoDeInformacaoWFA
 {
     public partial class Exercicio06 : Form
     {
+        /* 6.Desenvolver um algoritmo que solicite quatro notas e apresente a média ao final.
+
+            Exemplo:
+
+            Nota 01:​ 9,75
+            Nota 02: ​10,00
+            Nota 03:​ 4,42
+            Nota 04:​ 5,00
+            Média:​ 7,2925 */
+
         public Exercicio06()
         {
             InitializeComponent();
